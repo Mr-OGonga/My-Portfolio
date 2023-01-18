@@ -1,2 +1,2 @@
 # My-Portfolio
-A portfolio of work showcasing my skills.
+A portfolio of projects showcasing my skills.
