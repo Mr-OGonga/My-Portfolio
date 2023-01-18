@@ -1,6 +1,8 @@
+# ETL Pipeline Project
 This project was completed over the course of two weeks by me and 4 other team members. Outside of the project brief we were given no guidance and so had to use the skills we had accumulated on the course in order to strategise and complete it. This included coming up with a flow chart of work necessary to complete it from start to finish, producing a knaban board on Trello to document and teack progress, assign tasks equally between us and rotate leading team meetings each morning in order to keep up to date on progress and make sure the project as a whole was on track for our deadline date.
+<br>
 
-##The Project Itself
+## The Project Itself
 In the project itself we were given the task of creating an ETL pipeline. The pipeline would extract data from an online database in the form of SQL table ans store it as CSV files in an ingestion bucket (S3) on AWS. The task was then to It was then the task of a few of us to pull this data from the bucket, turn it into dataframes, transform ot based on the ERD diagrams (shcema?) we werre given in the rpoject brief using SQL queries, convert it to parquet format and then load it to a processed AWS S3 bucket for compact storage. The task was then to pull the data from the bucket, transform it based on the RED diasgrams given and then load it in parquet format to the processed AWS bucket. This was all done in/via a script. FInally it was passed on to a final database for storage of the most recent form of the data. Every half hour, new data would come in and the process would have to ben run again, updating th data in the final database.
 
 Everything was logged using lambdas and AWS CloudWatch, with appropriate error messages where necessary. The pulling, transforming and re-uploading of the data has error-handling and all of the features within the project have been tested using TDD (pytest with mocking and patching).
